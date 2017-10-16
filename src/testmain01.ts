@@ -27,7 +27,7 @@ function testImEx13() {
 }
     */
     let polA: ORPol.Policy = new ORPol.Policy("http://example.com/policy:6163", "http://www.w3.org/ns/odrl/2/Offer");
-    polA.addProfiles(['http://iptc.org/std/RightsML/2/'])
+    polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
 
     let c1uid = "_:C1";
     let c1: Constraints.Constraint = new Constraints.Constraint(c1uid,  nnh.prefixOdrlNs("dateTime"),
@@ -43,8 +43,8 @@ function testImEx13() {
     polA.addPermission(perm1uid);
 
     let basename = "polAtestImEx13";
-    polA.writeToFile('./testdataout/' + basename + '.ttl', "")
-    polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples")
+    polA.writeToFile('./testdataout/' + basename + '.ttl', "");
+    polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples");
 
     tran2JLD.transformNquadsToJsonld(basename);
 }
@@ -81,7 +81,7 @@ function testImEx22(){
  }
     */
     let polA: ORPol.Policy = new ORPol.Policy("http://example.com/policy:88", "http://www.w3.org/ns/odrl/2/Offer");
-    polA.addProfiles(['http://iptc.org/std/RightsML/2/'])
+    polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
 
     let ref1uid = "_:Ref1";
     let ref1: Constraints.Constraint = new Constraints.Constraint(ref1uid,rml.payAmount, odrl.eq, '"5.0"');
@@ -108,8 +108,8 @@ function testImEx22(){
     polA.addPermission(perm1uid);
 
     let basename = "polAtestImEx22";
-    polA.writeToFile('./testdataout/' + basename + '.ttl', "")
-    polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples")
+    polA.writeToFile('./testdataout/' + basename + '.ttl', "");
+    polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples");
 
     tran2JLD.transformNquadsToJsonld(basename);
 
@@ -143,7 +143,7 @@ function testImEx20(){
     */
 
     let polA: ORPol.Policy = new ORPol.Policy("http://example.com/policy:42B", "http://www.w3.org/ns/odrl/2/Agreement");
-    polA.addProfiles(['http://iptc.org/std/RightsML/2/'])
+    polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
 
     let ref1uid = "_:Ref1";
     let ref1: Constraints.Constraint = new Constraints.Constraint(ref1uid,rml.payAmount, odrl.eq, '"500.0"');
@@ -162,8 +162,8 @@ function testImEx20(){
 
 
     let basename = "polAtestImEx20";
-    polA.writeToFile('./testdataout/' + basename + '.ttl', "")
-    polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples")
+    polA.writeToFile('./testdataout/' + basename + '.ttl', "");
+    polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples");
 
     tran2JLD.transformNquadsToJsonld(basename);
 }
@@ -205,8 +205,8 @@ function testImEx24(){
     polA.addProphibition(prohib1uid);
 
     let basename = "polAtestImEx24";
-    polA.writeToFile('./testdataout/' + basename + '.ttl', "")
-    polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples")
+    polA.writeToFile('./testdataout/' + basename + '.ttl', "");
+    polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples");
 
     tran2JLD.transformNquadsToJsonld(basename);
 }

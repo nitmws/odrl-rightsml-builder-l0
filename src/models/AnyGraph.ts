@@ -52,7 +52,7 @@ export class AnyGraph {
      * @param {string} refinement
      * @returns {BResponse}
      */
-    protected addActionRefinement(refinement: string){
+    addActionRefinement(refinement: string){
         let bres: bc.BResponse = {status : 0};
         this.actionRefinements.push(refinement);
         bres.status = bc.st1200;
