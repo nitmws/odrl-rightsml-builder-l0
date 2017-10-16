@@ -1,0 +1,10 @@
+<http://example.com/policy:33CC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Agreement>.
+<http://example.com/policy:33CC> <http://www.w3.org/ns/odrl/2/profile> <http://iptc.org/std/RightsML/2/>.
+<http://example.com/policy:33CC> <http://www.w3.org/ns/odrl/2/prohibition> _:Proh1.
+_:Rem1 <http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/ns/odrl/2/anonymize>.
+_:Rem1 <http://www.w3.org/ns/odrl/2/target> <http://example.com/data:77>.
+_:Proh1 <http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/ns/odrl/2/index>.
+_:Proh1 <http://www.w3.org/ns/odrl/2/target> <http://example.com/data:77>.
+_:Proh1 <http://www.w3.org/ns/odrl/2/assigner> <http://example.com/person:88>.
+_:Proh1 <http://www.w3.org/ns/odrl/2/assignee> <http://example.com/org:99>.
+_:Proh1 <http://www.w3.org/ns/odrl/2/remedy> _:Rem1.

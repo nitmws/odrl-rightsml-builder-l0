@@ -1,0 +1,10 @@
+<http://example.com/policy:6163> a <http://www.w3.org/ns/odrl/2/Offer>;
+    <http://www.w3.org/ns/odrl/2/profile> <http://iptc.org/std/RightsML/2/>;
+    <http://www.w3.org/ns/odrl/2/permission> _:Pm1.
+_:C1 <http://www.w3.org/ns/odrl/2/leftOperand> <http://www.w3.org/ns/odrl/2/dateTime>;
+    <http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/ns/odrl/2/lt>;
+    <http://www.w3.org/ns/odrl/2/rightOperand> "2018-01-01".
+_:Pm1 <http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/ns/odrl/2/distribute>;
+    <http://www.w3.org/ns/odrl/2/target> <http://example.com/document:1234>;
+    <http://www.w3.org/ns/odrl/2/assigner> <http://example.com/org:616>;
+    <http://www.w3.org/ns/odrl/2/constraint> _:C1.

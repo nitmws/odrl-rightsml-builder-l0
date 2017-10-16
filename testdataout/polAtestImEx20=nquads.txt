@@ -1,0 +1,12 @@
+<http://example.com/policy:42B> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Agreement>.
+<http://example.com/policy:42B> <http://www.w3.org/ns/odrl/2/profile> <http://iptc.org/std/RightsML/2/>.
+<http://example.com/policy:42B> <http://www.w3.org/ns/odrl/2/obligation> _:O1.
+_:Ref1 <http://www.w3.org/ns/odrl/2/leftOperand> <http://www.w3.org/ns/odrl/2/payAmount>.
+_:Ref1 <http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/ns/odrl/2/eq>.
+_:Ref1 <http://www.w3.org/ns/odrl/2/rightOperand> "500.0".
+_:Ref1 <http://www.w3.org/ns/odrl/2/unit> <http://dbpedia.org/resource/Euro>.
+_:O1 <http://www.w3.org/ns/odrl/2/action> _:refaction01.
+_:O1 <http://www.w3.org/ns/odrl/2/assigner> <http://example.com/person:43>.
+_:O1 <http://www.w3.org/ns/odrl/2/assignee> <http://example.com/org:44>.
+_:refaction01 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://www.w3.org/ns/odrl/2/compensate>.
+_:refaction01 <http://www.w3.org/ns/odrl/2/refinement> _:Ref1.

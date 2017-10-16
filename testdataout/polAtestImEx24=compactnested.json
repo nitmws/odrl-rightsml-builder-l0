@@ -1,0 +1,16 @@
+{
+  "uid": "http://example.com/policy:33CC",
+  "type": "Agreement",
+  "profile": "http://iptc.org/std/RightsML/2/",
+  "prohibition": {
+    "action": "index",
+    "assignee": "http://example.com/org:99",
+    "assigner": "http://example.com/person:88",
+    "remedy": {
+      "action": "anonymize",
+      "target": "http://example.com/data:77"
+    },
+    "target": "http://example.com/data:77"
+  },
+  "@context": "http://www.w3.org/ns/odrl.jsonld"
+}

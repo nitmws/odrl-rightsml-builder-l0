@@ -1,0 +1,10 @@
+<http://example.com/policy:33CC> a <http://www.w3.org/ns/odrl/2/Agreement>;
+    <http://www.w3.org/ns/odrl/2/profile> <http://iptc.org/std/RightsML/2/>;
+    <http://www.w3.org/ns/odrl/2/prohibition> _:Proh1.
+_:Rem1 <http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/ns/odrl/2/anonymize>;
+    <http://www.w3.org/ns/odrl/2/target> <http://example.com/data:77>.
+_:Proh1 <http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/ns/odrl/2/index>;
+    <http://www.w3.org/ns/odrl/2/target> <http://example.com/data:77>;
+    <http://www.w3.org/ns/odrl/2/assigner> <http://example.com/person:88>;
+    <http://www.w3.org/ns/odrl/2/assignee> <http://example.com/org:99>;
+    <http://www.w3.org/ns/odrl/2/remedy> _:Rem1.

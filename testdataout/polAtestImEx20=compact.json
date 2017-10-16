@@ -1,0 +1,33 @@
+{
+  "@context": "http://www.w3.org/ns/odrl.jsonld",
+  "@graph": [
+    {
+      "uid": "_:O1",
+      "action": "_:refaction01",
+      "assignee": "http://example.com/org:44",
+      "assigner": "http://example.com/person:43"
+    },
+    {
+      "uid": "_:Ref1",
+      "leftOperand": "payAmount",
+      "operator": "eq",
+      "rightOperand": "500.0",
+      "unit": {
+        "uid": "http://dbpedia.org/resource/Euro"
+      }
+    },
+    {
+      "uid": "_:refaction01",
+      "rdf:value": {
+        "uid": "odrl:compensate"
+      },
+      "refinement": "_:Ref1"
+    },
+    {
+      "uid": "http://example.com/policy:42B",
+      "type": "Agreement",
+      "obligation": "_:O1",
+      "profile": "http://iptc.org/std/RightsML/2/"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "@context": "http://www.w3.org/ns/odrl.jsonld",
+  "@graph": [
+    {
+      "uid": "_:C1",
+      "leftOperand": "event",
+      "operator": "lt",
+      "rightOperand": {
+        "uid": "odrl:policyUsage"
+      }
+    },
+    {
+      "uid": "_:D1",
+      "action": "_:refaction01",
+      "constraint": "_:C1"
+    },
+    {
+      "uid": "_:Pm1",
+      "action": "play",
+      "assigner": "http://example.com/assigner:sony",
+      "duty": "_:D1",
+      "target": "http://example.com/music/1999.mp3"
+    },
+    {
+      "uid": "_:Ref1",
+      "leftOperand": "payAmount",
+      "operator": "eq",
+      "rightOperand": "5.0",
+      "unit": {
+        "uid": "http://dbpedia.org/resource/Euro"
+      }
+    },
+    {
+      "uid": "_:refaction01",
+      "rdf:value": {
+        "uid": "odrl:compensate"
+      },
+      "refinement": "_:Ref1"
+    },
+    {
+      "uid": "http://example.com/policy:88",
+      "type": "Offer",
+      "permission": "_:Pm1",
+      "profile": "http://iptc.org/std/RightsML/2/"
+    }
+  ]
+}

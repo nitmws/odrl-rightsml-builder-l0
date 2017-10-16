@@ -1,0 +1,16 @@
+{
+  "uid": "http://example.com/policy:6163",
+  "type": "Offer",
+  "permission": {
+    "action": "distribute",
+    "assigner": "http://example.com/org:616",
+    "constraint": {
+      "leftOperand": "dateTime",
+      "operator": "lt",
+      "rightOperand": "2018-01-01"
+    },
+    "target": "http://example.com/document:1234"
+  },
+  "profile": "http://iptc.org/std/RightsML/2/",
+  "@context": "http://www.w3.org/ns/odrl.jsonld"
+}

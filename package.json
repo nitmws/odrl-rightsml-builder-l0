@@ -1,0 +1,29 @@
+{
+  "name": "odrl-rightsml-builder-l0",
+  "version": "0.0.1",
+  "description": "App for building ODRL/RightsML Policies - Level 0",
+  "author": {
+    "name": "Michael W Steidl - NewsIT",
+    "email": "mwsteidl@newsit.biz",
+    "url": "https://www.linkedin.com/in/michaelwsteidl"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/nitmws/odrl-wprofile-evaltest1",
+  "bugs": {
+    "url": "https://github.com/nitmws/odrl-wprofile-evaltest1/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/n3": "0.0.3",
+    "@types/node": "^8.0.31"
+  },
+  "dependencies": {
+    "jsonfile": "^4.0.0",
+    "jsonld": "^0.4.12",
+    "n3": "^0.11.2"
+  }
+}

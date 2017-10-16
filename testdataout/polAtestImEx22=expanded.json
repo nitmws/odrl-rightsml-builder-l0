@@ -1,0 +1,108 @@
+[
+  {
+    "@id": "_:C1",
+    "http://www.w3.org/ns/odrl/2/leftOperand": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/event"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/operator": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/lt"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/rightOperand": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/policyUsage"
+      }
+    ]
+  },
+  {
+    "@id": "_:D1",
+    "http://www.w3.org/ns/odrl/2/action": [
+      {
+        "@id": "_:refaction01"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/constraint": [
+      {
+        "@id": "_:C1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Pm1",
+    "http://www.w3.org/ns/odrl/2/action": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/play"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/target": [
+      {
+        "@id": "http://example.com/music/1999.mp3"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/assigner": [
+      {
+        "@id": "http://example.com/assigner:sony"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/duty": [
+      {
+        "@id": "_:D1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ref1",
+    "http://www.w3.org/ns/odrl/2/leftOperand": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/payAmount"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/operator": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/eq"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/rightOperand": [
+      {
+        "@value": "5.0"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/unit": [
+      {
+        "@id": "http://dbpedia.org/resource/Euro"
+      }
+    ]
+  },
+  {
+    "@id": "_:refaction01",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/compensate"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/refinement": [
+      {
+        "@id": "_:Ref1"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.com/policy:88",
+    "@type": [
+      "http://www.w3.org/ns/odrl/2/Offer"
+    ],
+    "http://www.w3.org/ns/odrl/2/profile": [
+      {
+        "@id": "http://iptc.org/std/RightsML/2/"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/permission": [
+      {
+        "@id": "_:Pm1"
+      }
+    ]
+  }
+]

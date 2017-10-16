@@ -1,0 +1,23 @@
+{
+  "uid": "http://example.com/policy:42B",
+  "type": "Agreement",
+  "obligation": {
+    "action": {
+      "rdf:value": {
+        "uid": "odrl:compensate"
+      },
+      "refinement": {
+        "leftOperand": "payAmount",
+        "operator": "eq",
+        "rightOperand": "500.0",
+        "unit": {
+          "uid": "http://dbpedia.org/resource/Euro"
+        }
+      }
+    },
+    "assignee": "http://example.com/org:44",
+    "assigner": "http://example.com/person:43"
+  },
+  "profile": "http://iptc.org/std/RightsML/2/",
+  "@context": "http://www.w3.org/ns/odrl.jsonld"
+}
