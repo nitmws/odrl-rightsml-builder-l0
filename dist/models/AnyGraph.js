@@ -84,7 +84,15 @@ class AnyGraph {
                 }
             }
             else {
-                policyN3store.addTriple(this.uid, prop, propValue);
+                let subjectid = this.uid;
+                if (Array.isArray(propValue)) {
+                    propValue.forEach(function (singlePropValue) {
+                        policyN3store.addTriple(subjectid, prop, singlePropValue);
+                    });
+                }
+                else {
+                    policyN3store.addTriple(this.uid, prop, propValue);
+                }
             }
         }
         if (this.actionRefinements.length > 0) {

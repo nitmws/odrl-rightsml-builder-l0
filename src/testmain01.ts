@@ -1,7 +1,7 @@
 import * as ORPol from "./models/Policy";
 import * as Rules from "./models/Rule";
 import * as Constraints from "./models/Constraint";
-import * as odrl from "./models/odrlCoreVocabulary";
+import * as odrlCore from "./models/odrlCoreVocabulary";
 import * as rml from "./models/rightsmlVocabulary"
 import * as nnh from "./services/nonnormativeHelp";
 import * as tran2JLD from "./services/transformToJsonLd"
@@ -84,7 +84,7 @@ function testImEx22(){
     polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
 
     let ref1uid = "_:Ref1";
-    let ref1: Constraints.Constraint = new Constraints.Constraint(ref1uid,rml.payAmount, odrl.eq, '"5.0"');
+    let ref1: Constraints.Constraint = new Constraints.Constraint(ref1uid,rml.payAmount, odrlCore.eq, '"5.0"');
     ref1.setUnit("http://dbpedia.org/resource/Euro");
     ref1.writeToTriplestore(polA.policyN3store);
 
@@ -146,7 +146,7 @@ function testImEx20(){
     polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
 
     let ref1uid = "_:Ref1";
-    let ref1: Constraints.Constraint = new Constraints.Constraint(ref1uid,rml.payAmount, odrl.eq, '"500.0"');
+    let ref1: Constraints.Constraint = new Constraints.Constraint(ref1uid,rml.payAmount, odrlCore.eq, '"500.0"');
     ref1.setUnit("http://dbpedia.org/resource/Euro");
     ref1.writeToTriplestore(polA.policyN3store);
 
@@ -212,10 +212,83 @@ function testImEx24(){
 }
 
 
+function testRmlExGeoDuty1(){
+    /*
+    RightsML example at http://dev.iptc.org/RightsML-Combined-Example-geographic-and-duty-to-pay
+    */
+    let polA: ORPol.Policy = new ORPol.Policy("http://epa.eu/cv/policy/2", "http://www.w3.org/ns/odrl/2/Set");
+    polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
+
+    let c1uid = "_:C1";
+    let c1: Constraints.Constraint = new Constraints.Constraint(c1uid,  nnh.prefixOdrlNs("spatial"),
+        odrlCore.eq, "http://cvx.iptc.org/iso3166-1a3/DEU");
+    c1.writeToTriplestore(polA.policyN3store);
+
+    let duty1uid = "_:D1";
+    let duty1: Rules.DutyE = new Rules.DutyE(duty1uid, nnh.prefixOdrlNs("nextPolicy"),"http://epa.eu/cv/policy/3");
+    duty1.writeToTriplestore(polA.policyN3store);
+
+    let perm1uid = "_:Pm1";
+    let p1: Rules.Permission = new Rules.Permission(perm1uid, nnh.prefixOdrlNs("grantUse"), "urn:newsml:epa.eu:20090101:120111-999-000013");
+    p1.setAssigner("http://example.com/cv/party/epa");
+    p1.setAssignee("http://example.com/cv/party/dpa");
+    p1.addConstraint(c1uid);
+    p1.addDuty(duty1uid);
+    p1.writeToTriplestore(polA.policyN3store);
+
+    polA.addPermission(perm1uid);
+
+    let basename = "polAtestRmlExGeoDuty1";
+    polA.writeToFile('./testdataout/' + basename + '.ttl', "");
+    polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples");
+
+    tran2JLD.transformNquadsToJsonld(basename);
+
+}
+
+function testRmlExGeoTempor1(){
+    /*
+    RightsML example at http://dev.iptc.org/RightsML-Combined-Example-geographic-and-time-period
+    */
+    let polA: ORPol.Policy = new ORPol.Policy("http://gimages.info/cv/policy/2", "http://www.w3.org/ns/odrl/2/Set");
+    polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
+
+    let c1uid = "_:C1";
+    let c1: Constraints.Constraint = new Constraints.Constraint(c1uid,  nnh.prefixOdrlNs("spatial"),
+        odrlCore.neq, "http://cvx.iptc.org/iso3166-1a3/GBR");
+    c1.writeToTriplestore(polA.policyN3store);
+
+    let c2uid = "_:C2";
+    let c2: Constraints.Constraint = new Constraints.Constraint(c2uid,  nnh.prefixOdrlNs("dateTime"),
+        odrlCore.lt, '"2013-06-15"');
+    c2.setDataType("http://www.w3.org/2001/XMLSchema#dateTime");
+    c2.writeToTriplestore(polA.policyN3store);
+
+    let perm1uid = "_:Pm1";
+    let p1: Rules.Permission = new Rules.Permission(perm1uid, nnh.prefixOdrlNs("use"), "http://example.org/assets/120111-999-000013");
+    p1.setAssigner("http://companyreg.com/gim");
+    p1.setAssignee("http://companyreg.com/gim/clientgroup1");
+    p1.addConstraint(c1uid);
+    p1.addConstraint(c2uid);
+    p1.writeToTriplestore(polA.policyN3store);
+
+    polA.addPermission(perm1uid);
+
+    let basename = "polAtestRmlExGeoTemp1";
+    polA.writeToFile('./testdataout/' + basename + '.ttl', "");
+    polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples");
+
+    tran2JLD.transformNquadsToJsonld(basename);
+
+}
+
 
 // ****** MAIN functions **********************************************************
+
 
 testImEx13(); // Test of a simple Permission
 testImEx22(); // Test of a more complex Permission
 testImEx20(); // Test of an Obligation
 testImEx24(); // Test of a Prohibition
+testRmlExGeoDuty1(); // Test of a RightsML Example with geo-constraint and a duty to pay
+testRmlExGeoTempor1(); // Test of a RightsML Example with geographic and temporal constraints
