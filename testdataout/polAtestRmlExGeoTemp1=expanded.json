@@ -1,0 +1,90 @@
+[
+  {
+    "@id": "_:C1",
+    "http://www.w3.org/ns/odrl/2/leftOperand": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/spatial"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/operator": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/neq"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/rightOperand": [
+      {
+        "@id": "http://cvx.iptc.org/iso3166-1a3/GBR"
+      }
+    ]
+  },
+  {
+    "@id": "_:C2",
+    "http://www.w3.org/ns/odrl/2/leftOperand": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/dateTime"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/operator": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/lt"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/rightOperand": [
+      {
+        "@value": "2013-06-15"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/dataType": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:Pm1",
+    "http://www.w3.org/ns/odrl/2/action": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/use"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/target": [
+      {
+        "@id": "http://example.org/assets/120111-999-000013"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/assigner": [
+      {
+        "@id": "http://companyreg.com/gim"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/assignee": [
+      {
+        "@id": "http://companyreg.com/gim/clientgroup1"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/constraint": [
+      {
+        "@id": "_:C2"
+      },
+      {
+        "@id": "_:C1"
+      }
+    ]
+  },
+  {
+    "@id": "http://gimages.info/cv/policy/2",
+    "@type": [
+      "http://www.w3.org/ns/odrl/2/Set"
+    ],
+    "http://www.w3.org/ns/odrl/2/profile": [
+      {
+        "@id": "http://iptc.org/std/RightsML/2/"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/permission": [
+      {
+        "@id": "_:Pm1"
+      }
+    ]
+  }
+]

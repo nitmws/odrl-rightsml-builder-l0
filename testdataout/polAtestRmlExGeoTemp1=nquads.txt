@@ -1,0 +1,16 @@
+<http://gimages.info/cv/policy/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Set>.
+<http://gimages.info/cv/policy/2> <http://www.w3.org/ns/odrl/2/profile> <http://iptc.org/std/RightsML/2/>.
+<http://gimages.info/cv/policy/2> <http://www.w3.org/ns/odrl/2/permission> _:Pm1.
+_:C1 <http://www.w3.org/ns/odrl/2/leftOperand> <http://www.w3.org/ns/odrl/2/spatial>.
+_:C1 <http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/ns/odrl/2/neq>.
+_:C1 <http://www.w3.org/ns/odrl/2/rightOperand> <http://cvx.iptc.org/iso3166-1a3/GBR>.
+_:C2 <http://www.w3.org/ns/odrl/2/leftOperand> <http://www.w3.org/ns/odrl/2/dateTime>.
+_:C2 <http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/ns/odrl/2/lt>.
+_:C2 <http://www.w3.org/ns/odrl/2/rightOperand> "2013-06-15".
+_:C2 <http://www.w3.org/ns/odrl/2/dataType> <http://www.w3.org/2001/XMLSchema#dateTime>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/ns/odrl/2/use>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/target> <http://example.org/assets/120111-999-000013>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/assigner> <http://companyreg.com/gim>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/assignee> <http://companyreg.com/gim/clientgroup1>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/constraint> _:C2.
+_:Pm1 <http://www.w3.org/ns/odrl/2/constraint> _:C1.

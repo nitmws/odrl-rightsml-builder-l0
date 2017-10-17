@@ -1,0 +1,14 @@
+<http://epa.eu/cv/policy/2> a <http://www.w3.org/ns/odrl/2/Set>;
+    <http://www.w3.org/ns/odrl/2/profile> <http://iptc.org/std/RightsML/2/>;
+    <http://www.w3.org/ns/odrl/2/permission> _:Pm1.
+_:C1 <http://www.w3.org/ns/odrl/2/leftOperand> <http://www.w3.org/ns/odrl/2/spatial>;
+    <http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/ns/odrl/2/eq>;
+    <http://www.w3.org/ns/odrl/2/rightOperand> <http://cvx.iptc.org/iso3166-1a3/DEU>.
+_:D1 <http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/ns/odrl/2/nextPolicy>;
+    <http://www.w3.org/ns/odrl/2/target> <http://epa.eu/cv/policy/3>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/ns/odrl/2/grantUse>;
+    <http://www.w3.org/ns/odrl/2/target> <urn:newsml:epa.eu:20090101:120111-999-000013>;
+    <http://www.w3.org/ns/odrl/2/assigner> <http://example.com/cv/party/epa>;
+    <http://www.w3.org/ns/odrl/2/assignee> <http://example.com/cv/party/dpa>;
+    <http://www.w3.org/ns/odrl/2/constraint> _:C1;
+    <http://www.w3.org/ns/odrl/2/duty> _:D1.

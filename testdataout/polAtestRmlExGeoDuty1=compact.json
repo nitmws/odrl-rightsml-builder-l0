@@ -1,0 +1,33 @@
+{
+  "@context": "http://www.w3.org/ns/odrl.jsonld",
+  "@graph": [
+    {
+      "uid": "_:C1",
+      "leftOperand": "spatial",
+      "operator": "eq",
+      "rightOperand": {
+        "uid": "http://cvx.iptc.org/iso3166-1a3/DEU"
+      }
+    },
+    {
+      "uid": "_:D1",
+      "action": "nextPolicy",
+      "target": "http://epa.eu/cv/policy/3"
+    },
+    {
+      "uid": "_:Pm1",
+      "action": "grantUse",
+      "assignee": "http://example.com/cv/party/dpa",
+      "assigner": "http://example.com/cv/party/epa",
+      "constraint": "_:C1",
+      "duty": "_:D1",
+      "target": "urn:newsml:epa.eu:20090101:120111-999-000013"
+    },
+    {
+      "uid": "http://epa.eu/cv/policy/2",
+      "type": "Set",
+      "permission": "_:Pm1",
+      "profile": "http://iptc.org/std/RightsML/2/"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "@id": "_:C1",
+    "http://www.w3.org/ns/odrl/2/leftOperand": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/spatial"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/operator": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/eq"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/rightOperand": [
+      {
+        "@id": "http://cvx.iptc.org/iso3166-1a3/DEU"
+      }
+    ]
+  },
+  {
+    "@id": "_:D1",
+    "http://www.w3.org/ns/odrl/2/action": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/nextPolicy"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/target": [
+      {
+        "@id": "http://epa.eu/cv/policy/3"
+      }
+    ]
+  },
+  {
+    "@id": "_:Pm1",
+    "http://www.w3.org/ns/odrl/2/action": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/grantUse"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/target": [
+      {
+        "@id": "urn:newsml:epa.eu:20090101:120111-999-000013"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/assigner": [
+      {
+        "@id": "http://example.com/cv/party/epa"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/assignee": [
+      {
+        "@id": "http://example.com/cv/party/dpa"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/constraint": [
+      {
+        "@id": "_:C1"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/duty": [
+      {
+        "@id": "_:D1"
+      }
+    ]
+  },
+  {
+    "@id": "http://epa.eu/cv/policy/2",
+    "@type": [
+      "http://www.w3.org/ns/odrl/2/Set"
+    ],
+    "http://www.w3.org/ns/odrl/2/profile": [
+      {
+        "@id": "http://iptc.org/std/RightsML/2/"
+      }
+    ],
+    "http://www.w3.org/ns/odrl/2/permission": [
+      {
+        "@id": "_:Pm1"
+      }
+    ]
+  }
+]

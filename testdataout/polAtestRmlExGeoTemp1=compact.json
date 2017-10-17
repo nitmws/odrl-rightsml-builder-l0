@@ -1,0 +1,39 @@
+{
+  "@context": "http://www.w3.org/ns/odrl.jsonld",
+  "@graph": [
+    {
+      "uid": "_:C1",
+      "leftOperand": "spatial",
+      "operator": "odrl:neq",
+      "rightOperand": {
+        "uid": "http://cvx.iptc.org/iso3166-1a3/GBR"
+      }
+    },
+    {
+      "uid": "_:C2",
+      "odrl:dataType": {
+        "uid": "xsd:dateTime"
+      },
+      "leftOperand": "dateTime",
+      "operator": "lt",
+      "rightOperand": "2013-06-15"
+    },
+    {
+      "uid": "_:Pm1",
+      "action": "use",
+      "assignee": "http://companyreg.com/gim/clientgroup1",
+      "assigner": "http://companyreg.com/gim",
+      "constraint": [
+        "_:C2",
+        "_:C1"
+      ],
+      "target": "http://example.org/assets/120111-999-000013"
+    },
+    {
+      "uid": "http://gimages.info/cv/policy/2",
+      "type": "Set",
+      "permission": "_:Pm1",
+      "profile": "http://iptc.org/std/RightsML/2/"
+    }
+  ]
+}
