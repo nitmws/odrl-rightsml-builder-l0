@@ -5,11 +5,24 @@
     "action": "use",
     "assignee": "http://companyreg.com/gim/clientgroup1",
     "assigner": "http://companyreg.com/gim",
+    "target": "http://example.org/assets/120111-999-000013",
     "constraint": [
-      "_:C2",
-      "_:C1"
-    ],
-    "target": "http://example.org/assets/120111-999-000013"
+      {
+        "odrl:dataType": {
+          "uid": "xsd:dateTime"
+        },
+        "leftOperand": "dateTime",
+        "operator": "lt",
+        "rightOperand": "2013-06-15"
+      },
+      {
+        "leftOperand": "spatial",
+        "operator": "odrl:neq",
+        "rightOperand": {
+          "uid": "http://cvx.iptc.org/iso3166-1a3/GBR"
+        }
+      }
+    ]
   },
   "profile": "http://iptc.org/std/RightsML/2/",
   "@context": "http://www.w3.org/ns/odrl.jsonld"

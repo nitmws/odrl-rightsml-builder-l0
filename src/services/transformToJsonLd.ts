@@ -60,14 +60,31 @@ function addBlanknode(testnode: any, cjson: any){
         if (typeof value === 'string') {
             if (value.startsWith('_:')) {
                 if (prop !== 'uid') {
-                    let bnode = getBlanknode(value, cjson)
-                    let bnode1 = addBlanknode(bnode, cjson)
+                    let bnode = getBlanknode(value, cjson);
+                    let bnode1 = addBlanknode(bnode, cjson);
                     testnode[prop] = bnode1
                 }
                 else {
                     delete testnode[prop] // deletes the auto-generated id of a blank node
                 }
             }
+        }
+        if (Array.isArray(value)){
+            delete testnode[prop];
+            let arrnode: any[] = [];
+            value.forEach(function(singleValue:string){
+                if (singleValue.startsWith('_:')) {
+                    if (prop !== 'uid') {
+                        let bnode = getBlanknode(singleValue, cjson);
+                        let bnode1 = addBlanknode(bnode, cjson);
+                        arrnode.push(bnode1);
+                    }
+                    else {
+                        delete testnode[prop] // deletes the auto-generated id of a blank node
+                    }
+                }
+            })
+            testnode[prop] = arrnode;
         }
     }
     return testnode
