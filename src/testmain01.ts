@@ -27,7 +27,7 @@ function testImEx13() {
 }
     */
     let polA: ORPol.Policy = new ORPol.Policy("http://example.com/policy:6163", "http://www.w3.org/ns/odrl/2/Offer");
-    polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
+    polA.addProfiles([rml.profileUrl]);
 
     let c1uid = "_:C1";
     let c1: Constraints.Constraint = new Constraints.Constraint(c1uid,  nnh.prefixOdrlNs("dateTime"),
@@ -81,7 +81,7 @@ function testImEx22(){
  }
     */
     let polA: ORPol.Policy = new ORPol.Policy("http://example.com/policy:88", "http://www.w3.org/ns/odrl/2/Offer");
-    polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
+    polA.addProfiles([rml.profileUrl]);
 
     let ref1uid = "_:Ref1";
     let ref1: Constraints.Constraint = new Constraints.Constraint(ref1uid,rml.payAmount, odrlCore.eq, '"5.0"');
@@ -143,7 +143,7 @@ function testImEx20(){
     */
 
     let polA: ORPol.Policy = new ORPol.Policy("http://example.com/policy:42B", "http://www.w3.org/ns/odrl/2/Agreement");
-    polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
+    polA.addProfiles([rml.profileUrl]);
 
     let ref1uid = "_:Ref1";
     let ref1: Constraints.Constraint = new Constraints.Constraint(ref1uid,rml.payAmount, odrlCore.eq, '"500.0"');
@@ -189,7 +189,7 @@ function testImEx24(){
 }
      */
     let polA: ORPol.Policy = new ORPol.Policy("http://example.com/policy:33CC", "http://www.w3.org/ns/odrl/2/Agreement");
-    polA.addProfiles(['http://iptc.org/std/RightsML/2/'])
+    polA.addProfiles([rml.profileUrl])
 
     let rem1uid = "_:Rem1";
     let rem1: Rules.DutyB = new Rules.DutyB(rem1uid, nnh.prefixOdrlNs("anonymize"),"http://example.com/data:77");
@@ -217,7 +217,7 @@ function testRmlExGeoDuty1(){
     RightsML example at http://dev.iptc.org/RightsML-Combined-Example-geographic-and-duty-to-pay
     */
     let polA: ORPol.Policy = new ORPol.Policy("http://epa.eu/cv/policy/2", "http://www.w3.org/ns/odrl/2/Set");
-    polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
+    polA.addProfiles([rml.profileUrl]);
 
     let c1uid = "_:C1";
     let c1: Constraints.Constraint = new Constraints.Constraint(c1uid,  nnh.prefixOdrlNs("spatial"),
@@ -251,7 +251,7 @@ function testRmlExGeoTempor1(){
     RightsML example at http://dev.iptc.org/RightsML-Combined-Example-geographic-and-time-period
     */
     let polA: ORPol.Policy = new ORPol.Policy("http://gimages.info/cv/policy/2", "http://www.w3.org/ns/odrl/2/Set");
-    polA.addProfiles(['http://iptc.org/std/RightsML/2/']);
+    polA.addProfiles([rml.profileUrl]);
 
     let c1uid = "_:C1";
     let c1: Constraints.Constraint = new Constraints.Constraint(c1uid,  nnh.prefixOdrlNs("spatial"),

@@ -1,7 +1,9 @@
-// this file reflects the mapping of the JSON-LD context file at http://www.w3.org/ns/odrl.jsonld
+// This files lists all terms defined by the ODRL 2.2. Core Vocabulare
+//     All are normative terms.
+//     It does NOT include terms of the ODRL 2.2. Common Vocabulary with non-normative terms.
+//     Common Vocabulary terms must be adopted by an ODRL Profile for a valid use.
+// class properties
 export const action = "http://www.w3.org/ns/odrl/2/action";
-export const assignee = "http://www.w3.org/ns/odrl/2/assignee";
-export const assigner = "http://www.w3.org/ns/odrl/2/assigner";
 export const consequence = "http://www.w3.org/ns/odrl/2/consequence";
 export const constraint =  "http://www.w3.org/ns/odrl/2/constraint";
 export const duty =  "http://www.w3.org/ns/odrl/2/duty";
@@ -17,9 +19,7 @@ export const refinement =  "http://www.w3.org/ns/odrl/2/refinement";
 export const remedy = "http://www.w3.org/ns/odrl/2/remedy";
 export const rightOperand = "http://www.w3.org/ns/odrl/2/rightOperand";
 export const rightOperandReference = "http://www.w3.org/ns/odrl/2/rightOperandReference";
-export const source = "http://www.w3.org/ns/odrl/2/source";
 export const status = "http://www.w3.org/ns/odrl/2/status";
-export const target = "http://www.w3.org/ns/odrl/2/target";
 export const unit = "http://www.w3.org/ns/odrl/2/unit";
 // Constraint operators
 export const eq = "http://www.w3.org/ns/odrl/2/eq";
@@ -39,4 +39,28 @@ export const lc_and = "http://www.w3.org/ns/odrl/2/and";
 export const lc_andSequence = "http://www.w3.org/ns/odrl/2/andSequence";
 export const lc_or = "http://www.w3.org/ns/odrl/2/or";
 export const lc_xone = "http://www.w3.org/ns/odrl/2/xone";
+// Asset relations
+export const target = "http://www.w3.org/ns/odrl/2/target";
+export const hasPolicy = "http://www.w3.org/ns/odrl/2/hasPolicy";
+// Party functions
+export const assignee = "http://www.w3.org/ns/odrl/2/assignee";
+export const assigneeOf = "http://www.w3.org/ns/odrl/2/assigneeOf";
+export const assigner = "http://www.w3.org/ns/odrl/2/assigner";
+export const assignerOf = "http://www.w3.org/ns/odrl/2/assignerOf";
+// Asset and Party
+export const partOf = "http://www.w3.org/ns/odrl/2/partOf";
+export const source = "http://www.w3.org/ns/odrl/2/source";
+// Action properties
+export const includedIn = "http://www.w3.org/ns/odrl/2/includedIn";
+export const implies = "http://www.w3.org/ns/odrl/2/implies";
+// Action instances
+export const use = "http://www.w3.org/ns/odrl/2/use";
+export const transfer = "http://www.w3.org/ns/odrl/2/transfer";
+// Conflict
+export const conflict = "http://www.w3.org/ns/odrl/2/conflict";
+export const prefperm = "http://www.w3.org/ns/odrl/2/perm";
+export const prefprohib = "http://www.w3.org/ns/odrl/2/prohibit";
+export const voidpolicy = "http://www.w3.org/ns/odrl/2/invalid";
+
+
 
