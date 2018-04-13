@@ -1,0 +1,19 @@
+{
+  "uid": "http://example.com/RightsML/policy/idGeog1",
+  "type": "Set",
+  "permission": {
+    "action": "distribute",
+    "assignee": "http://example.com/cv/policy/group/epapartners",
+    "assigner": "http://example.com/cv/party/epa",
+    "constraint": {
+      "leftOperand": "spatial",
+      "operator": "eq",
+      "rightOperand": {
+        "uid": "http://cvx.iptc.org/iso3166-1a3/DEU"
+      }
+    },
+    "target": "urn:newsml:epa.eu:20090101:120111-999-000013"
+  },
+  "profile": "https://iptc.org/std/RightsML/odrl-profile/",
+  "@context": "http://www.w3.org/ns/odrl.jsonld"
+}

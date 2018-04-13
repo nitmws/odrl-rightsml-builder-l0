@@ -1,0 +1,11 @@
+<http://example.com/RightsML/policy/idGeog1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Set>.
+<http://example.com/RightsML/policy/idGeog1> <http://www.w3.org/ns/odrl/2/profile> <https://iptc.org/std/RightsML/odrl-profile/>.
+<http://example.com/RightsML/policy/idGeog1> <http://www.w3.org/ns/odrl/2/permission> _:Pm1.
+_:C1 <http://www.w3.org/ns/odrl/2/leftOperand> <http://www.w3.org/ns/odrl/2/spatial>.
+_:C1 <http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/ns/odrl/2/eq>.
+_:C1 <http://www.w3.org/ns/odrl/2/rightOperand> <http://cvx.iptc.org/iso3166-1a3/DEU>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/ns/odrl/2/distribute>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/target> <urn:newsml:epa.eu:20090101:120111-999-000013>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/assigner> <http://example.com/cv/party/epa>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/assignee> <http://example.com/cv/policy/group/epapartners>.
+_:Pm1 <http://www.w3.org/ns/odrl/2/constraint> _:C1.
