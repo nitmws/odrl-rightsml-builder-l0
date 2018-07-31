@@ -174,7 +174,7 @@ function testImEx24() {
     prohib1.setAssignee("http://example.com/org:99");
     prohib1.addRemedy(rem1uid);
     prohib1.writeToTriplestore(polA.policyN3store);
-    polA.addProphibition(prohib1uid);
+    polA.addProhibition(prohib1uid);
     let basename = "polAtestImEx24";
     polA.writeToFile('./testdataout/' + basename + '.ttl', "");
     polA.writeToFile('./testdataout/' + basename + '=nquads.txt', "N-Triples");
