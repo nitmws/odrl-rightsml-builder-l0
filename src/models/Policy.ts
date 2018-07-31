@@ -60,7 +60,7 @@ export class Policy {
      * Adds a Prohibition (more than 1 in total may be added)
      * @param {string} prohibitionUid
      */
-    addProphibition(prohibitionUid: string) {
+    addProhibition(prohibitionUid: string) {
         this.policyN3store.addTriple(this.uid, odrlCore.prohibition, prohibitionUid);
 
     }
